@@ -64,4 +64,34 @@ select * from produtos where quantidade >=300 and valor <=50;
 
 select * from produtos where quantidade >=300 or valor <=50;
 
-select * from produtos where nome = 'Monitor' and tipo = 'Informática'
+select * from produtos where nome = 'Monitor' and tipo = 'Informatica';
+
+select * from produtos where nome = 'Monitor' or tipo = 'Informatica';
+
+select * from produtos where tipo in('Informatica','Telefone');
+
+
+select * from produtos where valor between 250 and 400;
+
+select * from produtos where valor not between 250 and 400;
+
+select * from produtos where codigo = 5;
+
+select * from produtos where nome like '%o';
+
+select * from produtos where nome like 'o%';
+
+select * from produtos where nome like '%o%';
+-- %nome
+-- nome%
+-- %nome%
+
+select * from produtos where nome like '%a%' and tipo = 'Informatica';
+
+select * from produtos where nome like '%a%' or tipo = 'Informatica';
+
+update produtos set valor = valor * 1.12 where nome like 'F%';
+
+select nome, valor from produtos where nome like 'F%';
+
+select valor * 1.12 as 'valor' from produtos where name like 'F%';
